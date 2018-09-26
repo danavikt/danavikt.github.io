@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1"
   }
 }
