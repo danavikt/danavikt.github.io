@@ -1,0 +1,182 @@
+html {
+background-image: linear-gradient(to bottom right, #180cac, #d054e4);
+background-color: #5f45bb;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+}
+
+html, body, .main {
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.wallpaper {
+    display: block;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    position: fixed;
+    background-image: url("austria.jpg");
+    background-size: cover;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all 1s;
+    transition-delay: 2s;
+}
+
+.wallpaper.is-loaded {
+  transform: scale(1);
+  opacity: 0.2;
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.content {
+  width: 450px;
+  height: auto;
+}
+
+.picture {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  height: auto;
+  animation-name: picImage;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+@keyframes picImage {
+ from {
+   opacity: 0;
+   transform: scale(1.2) translateY(-1rem);
+ }
+ to {
+   opacity: 1;
+   transform: scale(1) translateY(0);
+ }
+}
+
+.button {
+  background-color: #fff;
+  border-radius: 290486px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  color: #9013fe;
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 1.25em 2em;
+  text-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icons {
+  margin-top: 40px;
+}
+
+i {
+  color: white;
+  width: 20px;
+  height: 20px;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-name: slideUp;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fa-twitter-square {
+    animation-delay: 600ms;
+}
+
+.fa-github {
+    animation-delay: 700ms;
+}
+
+.fa-linkedin {
+    animation-delay: 800ms;
+}
+
+.icons a:hover {
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+
+.hello, .about, .recruiter, .hr, .mainbutton {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
+  animation-name: slideDown;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+.hello {
+    animation-delay: 100ms;
+}
+
+.recruiter {
+    animation-delay: 200ms;
+}
+
+.about {
+    animation-delay: 300ms;
+}
+
+.hr {
+    animation-delay: 400ms;
+}
+
+.mainbutton {
+    animation-delay: 500ms;
+}
+
+@media screen and (max-width: 778px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+}
